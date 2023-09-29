@@ -27,11 +27,11 @@ phases:
   pre_build:
     commands:
       - echo "installing dependencies..."
-      - pip install -r aws-project-cicd/requirements.txt
+      - pip install -r simple-application/requirements.txt
   build:
     commands:
       - echo "Running tests..."
-      - cd day-13/simple-python-app/
+      - cd simple/application
       - echo "Building Docker image..."
   #post_build:
     #commands:
@@ -39,4 +39,4 @@ phases:
 artifacts:
   files:
     - '**/*'
-  base-directory: ../aws-project-cicd
+  base-directory: ../simple-application
